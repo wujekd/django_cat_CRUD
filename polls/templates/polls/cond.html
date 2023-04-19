@@ -1,0 +1,19 @@
+{% extends 'polls/base1.html' %}
+{% block content %}
+    <p>The random number is: {{ random }}</p>
+    <p>Your guess was {{guess}}</p>
+    {% if guess < random %}
+        <p>Too low</p>
+    {% elif guess > random %}
+        <p>Too high</p>
+    {% else %}
+        <p>Thats it!</p>
+    {% endif %}
+
+    </br>
+
+    <li><a href="{% url 'cats:cat' 42 %}">cats/cat/42</a></li>
+
+    <li><a href="{% url 'cats:cats' %}">url cats:cats</a></li>
+
+{% endblock %}

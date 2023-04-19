@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>The Guess Game</title>
+    </head>
+    <body><p>Your guess was {{zap}} innit.</p>
+
+    <ul>
+        {% for x in fruits %}
+        <li>{{x}}</li>
+        {% endfor %}
+    </ul>
+    {% if nuts %}
+    <p>The number of nuts is: {{ nuts|length }}</p>
+
+    {% else %}
+    <p>No nuts</p>
+    {% endif %}
+
+    </br>
+
+    <li>
+        {% url 'gview:cats' %}
+        (url 'gview:cats') from gview/urls.py
+    </li>
+
+    </body>
+</html>
